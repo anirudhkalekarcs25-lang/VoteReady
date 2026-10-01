@@ -1,0 +1,6 @@
+{
+  "name": "voteready",
+  "private": true,
+  "description": "Neutral guide for first-time voters in India",
+  "engines": { "node": ">=20" }
+}

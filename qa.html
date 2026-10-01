@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14503f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Ask a voting question | VoteReady</title>
+  <meta name="description" content="Plain-language answers to common voting-process questions for first-time voters in India, based on reference notes drawn from ECI material.">
+  <meta property="og:title" content="Ask a voting question | VoteReady">
+  <meta property="og:description" content="Plain-language answers to common voting-process questions for first-time voters in India, based on reference notes drawn from ECI material.">
+  <meta property="og:type" content="website">
+</head>
+<body data-page="qa">
+  <a class="skip" href="#main" data-i18n="skip">Skip to main content</a>
+  <header id="site-header"></header>
+  <main id="main">
+
+    <div class="wrap qa-wrap">
+      <div class="page-head" style="padding-bottom:16px">
+        <h1 data-i18n="q_title">Ask a voting question</h1>
+        <p class="lede" data-i18n="q_sub">Answers cover the voting process only. They come from a fixed set of notes based on ECI material, and are not an official statement.</p>
+      </div>
+      <h2 class="sr" data-i18n="q_chips">Common questions</h2>
+      <div class="chips" id="chips">
+        <button type="button" class="chip" data-i18n="q_c1">How do I register to vote?</button>
+        <button type="button" class="chip" data-i18n="q_c2">What ID can I carry to the polling booth?</button>
+        <button type="button" class="chip" data-i18n="q_c3">What if my name is not on the voter list?</button>
+        <button type="button" class="chip" data-i18n="q_c4">What happens inside the polling booth?</button>
+      </div>
+      <form id="qa-form" novalidate>
+        <label class="field" for="q" data-i18n="q_label">Your question</label>
+        <textarea id="q" name="q" rows="3" maxlength="600" aria-describedby="q-count q-notice q-error"></textarea>
+        <div class="field-foot">
+          <span class="count" id="q-count" aria-live="off">0 / 500</span>
+          <button type="submit" class="btn" id="send" data-i18n="q_send">Get an answer</button>
+        </div>
+        <p class="count" id="q-error" style="color:var(--danger);margin-top:8px" role="alert"></p>
+        <p class="count" id="q-notice" style="margin-top:16px" data-i18n="q_notice">Your question is sent to a server to generate the answer. Do not include your name, voter ID or other personal details.</p>
+      </form>
+      <div id="result" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/site.js" defer></script>
+  <script src="assets/qa.js" defer></script>
+</body>
+</html>

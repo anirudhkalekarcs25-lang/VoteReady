@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14503f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Am I ready to vote? | VoteReady checklist</title>
+  <meta name="description" content="Eight steps from eligibility to polling day, each linking to the official Election Commission of India page where you take action.">
+  <meta property="og:title" content="Am I ready to vote? | VoteReady checklist">
+  <meta property="og:description" content="Eight steps from eligibility to polling day, each linking to the official Election Commission of India page where you take action.">
+  <meta property="og:type" content="website">
+</head>
+<body data-page="checklist">
+  <a class="skip" href="#main" data-i18n="skip">Skip to main content</a>
+  <header id="site-header"></header>
+  <main id="main">
+
+    <div class="wrap">
+      <div class="page-head">
+        <h1 data-i18n="c_title">Am I ready to vote?</h1>
+        <p class="lede" data-i18n="c_sub">Work through these steps in order. Each one explains what to do and links to the official ECI page where you do it.</p>
+      </div>
+      <div class="notice" style="margin-bottom:32px">
+        <strong data-i18n="c_epic_t">Check your real voter record</strong>
+        <span data-i18n="c_epic_d">VoteReady cannot look up voter records and never asks for your EPIC number. Use the official Electoral Search service to see whether you are on the roll and where you vote.</span>
+        <div style="margin-top:14px"><a class="btn small" href="https://electoralsearch.eci.gov.in/" target="_blank" rel="noopener noreferrer"><span data-i18n="c_epic_btn">Open Electoral Search</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a></div>
+      </div>
+      <div class="progress" role="status" aria-live="polite">
+        <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="progress-text" id="progress-text"></span>
+      </div>
+      <ol class="cl-list" id="cl-list" aria-busy="true"><li class="panel" data-i18n="c_loading">Loading checklist</li></ol>
+      <div class="panel done-panel" id="done-panel" hidden>
+        <h2 style="font-size:1.6rem;margin-bottom:8px" data-i18n="c_done_t">You have completed every step</h2>
+        <p style="margin:0" data-i18n="c_done_d">Rules and polling hours can change for each election. Check the official portal close to polling day.</p>
+      </div>
+      <div class="tools-row">
+        <button type="button" class="link-btn" id="reset-btn" data-i18n="c_reset">Reset progress</button>
+        <span class="count" id="reset-msg" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/site.js" defer></script>
+  <script src="assets/checklist.js" defer></script>
+</body>
+</html>

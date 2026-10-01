@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14503f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Voting resources by state | VoteReady</title>
+  <meta name="description" content="Find your state or union territory capital, the 1950 voter helpline and the official Chief Electoral Officer directory.">
+  <meta property="og:title" content="Voting resources by state | VoteReady">
+  <meta property="og:description" content="Find your state or union territory capital, the 1950 voter helpline and the official Chief Electoral Officer directory.">
+  <meta property="og:type" content="website">
+</head>
+<body data-page="map">
+  <a class="skip" href="#main" data-i18n="skip">Skip to main content</a>
+  <header id="site-header"></header>
+  <main id="main">
+
+    <div class="wrap">
+      <div class="page-head">
+        <h1 data-i18n="m_title">Voting resources by state</h1>
+        <p class="lede" data-i18n="m_sub">Select a state or union territory to see its capital, the voter helpline and official links.</p>
+      </div>
+      <div class="explorer">
+        <section class="panel info-card" aria-labelledby="sel-label">
+          <label class="field" id="sel-label" for="state-select" data-i18n="m_select">State or union territory</label>
+          <select id="state-select"><option value="" data-i18n="m_choose">Choose a state</option></select>
+          <div id="info-body" aria-live="polite" style="margin-top:20px"><p style="color:var(--muted);margin:0" data-i18n="m_empty">Select a state or union territory to see its details.</p></div>
+          <div class="route" id="route" hidden>
+            <h2 style="font-size:1.35rem;margin-bottom:8px" data-i18n="m_route_t">Directions to the CEO office</h2>
+            <p style="color:var(--muted);font-size:.95rem" data-i18n="m_route_d">Your location is used once, in your browser, to draw a route. It is not stored or sent to VoteReady. The destination is the Chief Electoral Officer office in the state capital, so confirm the address in the ECI directory first.</p>
+            <div class="info-actions" style="margin-top:12px">
+              <button type="button" class="btn secondary small" id="route-btn" data-i18n="m_route_btn">Show directions from my location</button>
+              <a class="btn secondary small" id="gm-link" href="#" target="_blank" rel="noopener noreferrer"><span data-i18n="m_open">Open in Google Maps</span></a>
+            </div>
+            <p class="route-status" id="route-status" role="status" aria-live="polite"></p>
+            <div id="google-map" role="region" aria-label="Directions map"></div>
+          </div>
+        </section>
+        <div class="map-panel">
+          <svg id="india-map" viewBox="0 0 600 680" role="group" data-i18n-aria="m_map_label" aria-label="Map of Indian states and union territories. Use the selector for the same information."></svg>
+          <div class="map-tip" id="tip" aria-hidden="true"></div>
+          <p class="map-note" data-i18n="m_note">This map is a simplified illustration and is not an official boundary map.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/site.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" defer></script>
+  <script src="assets/map.js" defer></script>
+</body>
+</html>
